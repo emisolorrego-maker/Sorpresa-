@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi amor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        
+        <section class="counter-section">
+            <h1 class="date-title">02 . 10 . 2023</h1>
+            <div id="countdown" class="timer">
+                Cargando nuestro tiempo...
+            </div>
+            <p class="subtitle">compartiendo la vida contigo</p>
+        </section>
+
+        <section class="photo-section">
+            <div class="polaroid">
+                <img src="primer_beso.jpg" alt="Nuestro primer beso">
+                <div class="caption">Donde todo empezó.</div>
+            </div>
+        </section>
+
+        <section class="letter-section">
+            <div class="hilo-rojo"></div>
+            <p class="poem">
+                Dicen que las personas destinadas a encontrarse están unidas por un hilo invisible. El nuestro se cruzó con la primera mirada de amor y, desde entonces, no ha hecho más que entrelazarse más fuerte.
+            </p>
+            <p class="letter-text">
+                Mirar atrás y ver todo el tiempo que ha pasado me llena de una nostalgia hermosa. Parece que fue ayer cuando empezamos, pero al mismo tiempo siento que te conozco de toda la vida. Lo increíble es que, a pesar de los días, los meses y los cambios, cuando te miro sigo sintiendo exactamente lo mismo que el primer día: ese amor inmenso, esa paz y la certeza de que mi lugar favorito es a tu lado.
+            </p>
+            <p class="letter-text">
+                Te amo y te adoro. Estoy tan profundamente orgullosa de la persona que eres, de tu esfuerzo y de tu gran corazón. Sé con total seguridad que vas a lograr cada cosa que te propongas; eres capaz de alcanzar cosas gigantescas. Y quiero que recuerdes siempre, pase lo que pase, que aquí estaré yo, caminando a tu lado, apoyándote en los días buenos para celebrar y en los malos para ser tu refugio. 
+            </p>
+            <p class="signature">Te amo, Emilia ❤️</p>
+        </section>
+
+    </main>
+
+<script>
+    // Fecha de inicio: 2 de Octubre de 2023 
+    const fechaInicio = new Date(2023, 9, 2, 0, 0, 0);
+
+    function actualizarContador() {
+        const ahora = new Date();
+        const diferencia = ahora - fechaInicio;
+
+        // Cálculos matemáticos
+        const milisegundosPorDia = 1000 * 60 * 60 * 24;
+        const dias = Math.floor(diferencia / milisegundosPorDia);
+        
+        const restoDias = diferencia % milisegundosPorDia;
+        const horas = Math.floor(restoDias / (1000 * 60 * 60));
+        
+        const restoHoras = restoDias % (1000 * 60 * 60);
+        const minutos = Math.floor(restoHoras / (1000 * 60));
+        
+        const restoMinutos = restoHoras % (1000 * 60);
+        const segundos = Math.floor(restoMinutos / 1000);
+
+        // Renderizar el texto
+        const contadorElemento = document.getElementById('countdown');
+        if (contadorElemento) {
+            contadorElemento.innerHTML = `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos`;
+        }
+    }
+
+    actualizarContador();
+    setInterval(actualizarContador, 1000);
+</script>
+</body>
+</html>

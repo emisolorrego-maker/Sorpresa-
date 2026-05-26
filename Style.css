@@ -1,0 +1,131 @@
+/* Reset básico para móviles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f4ef; /* Fondo beige suave */
+    color: #4a3e3d; /* Texto marrón oscuro/cálido, menos agresivo que el negro */
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Tamaño perfecto para pantallas de celulares */
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos del Contador */
+.counter-section {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.date-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #8c6d62;
+}
+
+.timer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin: 15px 0;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #a68b80;
+}
+
+/* Estilo de la Foto Polaroid */
+.photo-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.polaroid {
+    background: #ffffff;
+    padding: 15px 15px 25px 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    border-radius: 2px;
+    width: 90%;
+    transform: rotate(-1deg); /* Ligera inclinación romántica */
+    transition: transform 0.3s;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.polaroid .caption {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-top: 15px;
+    color: #6e5a53;
+}
+
+/* Estilos del Texto / Carta */
+.letter-section {
+    padding: 0 15px;
+    margin-bottom: 60px;
+}
+
+.hilo-rojo {
+    width: 40px;
+    height: 1px;
+    background-color: #c94c4c; /* Detalle sutil en rojo gastado */
+    margin: 0 auto 30px auto;
+}
+
+.poem {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #8c6d62;
+    margin-bottom: 30px;
+}
+
+.letter-text {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify; /* Para que se vea ordenado */
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+.signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    margin-top: 40px;
+    color: #8c6d62;
+}
